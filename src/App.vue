@@ -29,6 +29,9 @@ const addTodo = () => {
 const removeTodo = (todo) => {
   todos.value = todos.value.filter((t) => t !== todo)
 }
+const removeAll = (todo) => {
+  todos.value = [];
+}
 onMounted(() => {
   name.value = localStorage.getItem('name') || ''
   todos.value = JSON.parse(localStorage.getItem('todos')) || []
@@ -70,6 +73,12 @@ onMounted(() => {
 
           <div class="actions">
             <button class="delete" @click="removeTodo(todo)">Delete</button>
+          </div>
+        </div>
+
+        <div class="todo-remove">
+          <div class="actions">
+            <button class="delete" @click="removeAll(todo)">Clear All</button>
           </div>
         </div>
 

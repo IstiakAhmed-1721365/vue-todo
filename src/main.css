@@ -229,3 +229,31 @@ input:checked ~ .bubble::after {
 	text-decoration: line-through;
 	color: var(--grey);
 }
+
+.todo-remove {
+	display: box;
+	align-items: right;
+    float: left;
+	background-color: red;
+	padding: .75rem;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1rem;
+    width: 20%;
+    cursor: pointer;
+	transition: 0.2s ease-in-out;
+    
+}
+
+.todo-remove .actions button {
+	display: block;
+	padding: 0.25rem;
+	border-radius: 0.25rem;
+	color: #FFF;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.todo-remove .actions button:hover {
+	opacity: 0.75;
+}
